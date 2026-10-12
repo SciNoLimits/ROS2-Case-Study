@@ -43,5 +43,13 @@ def generate_launch_description():
             executable='rviz2',
             name='rviz2',
             output='screen',
+            arguments=[
+                '-d',
+                PathJoinSubstitution([
+                    FindPackageShare('moment_description'),
+                    'rviz',
+                    'moment.rviz',
+                ]),
+            ],
         ),
     ])
